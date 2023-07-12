@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 const TransactionSchema = new mongoose.Schema({
   text: {
@@ -17,9 +17,13 @@ const TransactionSchema = new mongoose.Schema({
 });
 
 
+
+
 // const transaction = mongoose.model('Transaction', TransactionSchema)
 // transaction.safe()
 // .then(() => console.log("Transactio saved successfully."))
 // .catch((err) => console.log(err));
 
-module.exports = mongoose.model('Transaction', TransactionSchema);
+const TransactionModel = mongoose.model('Transaction', TransactionSchema);
+
+export default TransactionModel;

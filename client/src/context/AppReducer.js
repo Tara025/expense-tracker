@@ -1,7 +1,9 @@
-export default (state, action) => {
+import React from 'react';
+
+const appReducer = (state, action) => {
   switch(action.type) {
     case 'GET_TRANSACTIONS':
-      return {
+     return {
         ...state,
         loading: false,
         transactions: action.payload
@@ -25,3 +27,5 @@ export default (state, action) => {
       return state;
   }
 }
+
+export default appReducer
