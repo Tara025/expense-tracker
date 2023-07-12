@@ -1,0 +1,25 @@
+const mongoose = require('mongoose');
+
+const TransactionSchema = new mongoose.Schema({
+  text: {
+    type: String,
+    trim: true,
+    required: [true, 'Bitte füge einen Text ein.']
+  },
+  amount: {
+    type: Number,
+    required: [true, 'Bitte einen negativen oder positiven Betrag eingeben.']
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+
+// const transaction = mongoose.model('Transaction', TransactionSchema)
+// transaction.safe()
+// .then(() => console.log("Transactio saved successfully."))
+// .catch((err) => console.log(err));
+
+module.exports = mongoose.model('Transaction', TransactionSchema);
