@@ -5,6 +5,8 @@ import colors from "colors";
 import morgan from "morgan";
 import connectDB from "./config/db.js";
 import  transactionRouter from "./routes/transactions.js"
+import userRouter from "./routes/userRoutes.js";
+
 
 dotenv.config({ path: './config/config.env' });
 
@@ -18,12 +20,13 @@ if(process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 
-app.use('/api/v1/transactions', transactionRouter); //yarn.lock (?)
+app.use("/api/v1/", transactionRouter); //yarn.lock (?)
+app.use(userRouter); 
 
 if(process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 
-  app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')));
+  // app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')));
 }
 
 const PORT = process.env.PORT || 5000;

@@ -5,7 +5,7 @@ const UserSchema = new mongoose.Schema({
     trim: true,
     required: true},
 
-    password:{type: String, //Richtig???
+    password:{type: String,
     trim: true,
     required: true},
 
@@ -36,4 +36,6 @@ const UserSchema = new mongoose.Schema({
 
  
 
- export const UserModel = mongoose.model('User', UserSchema);
+const UserModel = mongoose.model('User', UserSchema);
+
+export default UserModel;

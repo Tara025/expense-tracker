@@ -1,6 +1,6 @@
 // controllers/user.js
 
-import { UserModel } from '../models/User.js';
+import UserModel from '../models/UserModel.js';
 
 // Benutzer registrieren
 export const registerUser = async (req, res) => {
