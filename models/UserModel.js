@@ -8,16 +8,25 @@ const UserSchema = new mongoose.Schema({
     password:{type: String, //Richtig???
     trim: true,
     required: true},
-  
-    text: {
-      type: String,
-      trim: true,
-      required: [true, 'Bitte füge einen Text ein.']
-    },
-    amount: {
+
+    balance: {
       type: Number,
-      required: [true, 'Bitte einen negativen oder positiven Betrag eingeben.']
+      default: 0
     },
+    transactions: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Transaction'
+    }],
+  
+    // text: {
+    //   type: String,
+    //   trim: true,
+    //   required: [true, 'Bitte füge einen Text ein.']
+    // },
+    // amount: {
+    //   type: Number,
+    //   required: [true, 'Bitte einen negativen oder positiven Betrag eingeben.']
+    // },
     createdAt: {
       type: Date,
       default: Date.now
