@@ -20,6 +20,8 @@ function App() {
         <AddTransaction />
       </div>
     </GlobalProvider>
+
+    
   );
 }
 

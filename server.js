@@ -6,6 +6,7 @@ import morgan from "morgan";
 import connectDB from "./config/db.js";
 import  transactionRouter from "./routes/transactions.js"
 import userRouter from "./routes/userRoutes.js";
+import UserModel from "./models/UserModel.js";
 
 
 dotenv.config({ path: './config/config.env' });
@@ -15,6 +16,7 @@ connectDB();
 const app = express();
 
 app.use(express.json());
+// app.use(expressMongoLogin (UserModel))
 
 if(process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
