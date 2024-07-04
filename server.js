@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import colors from "colors";
 import morgan from "morgan";
 import connectDB from "./config/db.js";
-import  transactionRouter from "./routes/transactions.js"
+import transactionRouter from "./routes/transactions.js"
 import userRouter from "./routes/userRoutes.js";
 import UserModel from "./models/UserModel.js";
 
