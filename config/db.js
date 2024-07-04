@@ -4,7 +4,7 @@ const connectDB = async () => {
   try {
     const conn = await mongoose.connect(`mongodb+srv://Tara:Hallo12345!@cluster0.sfajdij.mongodb.net/expend-tracker`, {
       useNewUrlParser: true,
-      useCreateIndex: true,
+      //useCreateIndex: true,
       useUnifiedTopology: true
     });
 
