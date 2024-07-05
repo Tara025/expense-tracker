@@ -13,16 +13,21 @@
   "author": "Brad Traversy",
   "license": "MIT",
   "dependencies": {
+    "@vercel/fun": "^1.1.1",
     "colors": "^1.4.0",
+    "debug": "^4.3.2",
     "dotenv": "^8.6.0",
     "express": "^4.19.2",
     "express-mongo-login": "^1.1.5",
     "mongoose": "^5.13.22",
     "morgan": "^1.9.1",
-    "vercel": "^32.3.0"
+    "semver": "^7.5.2",
+    "simple-update-notifier": "^2.0.0",
+    "undici": "^6.19.2",
+    "vercel": "^34.3.0"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^3.1.4"
   }
 }
