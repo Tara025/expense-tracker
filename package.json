@@ -21,6 +21,7 @@
     "express-mongo-login": "^1.1.5",
     "mongoose": "^5.13.22",
     "morgan": "^1.9.1",
+    "node": "^22.4.0",
     "semver": "^7.5.2",
     "simple-update-notifier": "^2.0.0",
     "undici": "^6.19.2",
